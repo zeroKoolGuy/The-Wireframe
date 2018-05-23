@@ -1,0 +1,128 @@
+/* css variables */
+:root{
+  --primary: #979381; /*grey*/
+  --generic:#333;
+  --dark: #55577F; /*indigo*/
+  --light: #83758F; /*purple*/
+  --contrast: #E7692E; /*orange*/
+  --shadow:  0 1px 5px rgba(104, 104, 104, 0.8); /*color, color, color, alpha*/
+}
+
+
+/* core styles */
+html {
+  box-sizing: border-box;
+  font-family: arial,helvetica, sans-serif;
+}
+
+body {
+   background: linear-gradient(60deg, var(--light), var(--primary));
+   margin: 30px 50px;
+   line-height: 1.4;
+    /* background: url(pictures/foodDishSide.png);
+    background-size: 98%;
+    background-blend-mode: difference; */
+}
+
+.btn{
+  background: var(--contrast);
+  color: #fff;
+
+  padding: 0.6rem 1.3rem; /*1 rem is 16px*/
+  text-decoration: none;
+  border: 0;
+  border-radius: 4px;
+}
+
+img{
+  max-width: 100%;
+}
+
+.recipe-showcase{
+  display: grid;
+  grid-gap: 20px;
+}
+
+/* Navigation */
+.main-nav ul{
+  background: var(--contrast);
+  display: grid;
+  grid-gap: 20px;
+  padding: 0; /*override padding*/
+  list-style: none; /*removes bullets*/
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.main-nav a{
+  background: var(--contrast);
+  border-left: 1px solid black;
+  display: inline-block;
+  text-decoration: none;
+  padding: 0.8rem;
+  width: 100%;
+  text-align: center;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 1.1rem;
+  /* box-shadow: var(--shadow); */ /*remove boader*/
+  text-align: center;
+}
+
+.main-nav a:hover{
+  background: var(--dark);
+  /* offset-x | offset-y | blur-radius | spread-radius | color */
+  box-shadow: 0 4px 8px 1px rgba(0,0,0,0.24), 0 5px 10px 2px rgba(0,0,0,0.3);
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+
+.main-nav ul li:first-child a{
+  border: none;
+}
+
+/* sub navigation area */
+.recipe-sub-nav-bar ul{
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-gap: 10px;
+  padding: 0; /*override padding*/
+  list-style: none; /*removes bullets*/
+  margin: 0;
+}
+
+.recipe-sub-nav-bar{
+display: grid;
+grid-gap: 20px;
+grid-template-columns: repeat(10, 1fr);
+}
+
+.recipe-sub-nav-bar a{
+  list-style-type: none;
+  text-transform: uppercase;
+  display: block;
+  text-decoration: none;
+  color: black;
+  padding-left: 1.5rem;
+}
+
+.recipe-sub-nav-bar ul{
+font-weight: bold;
+margin-top: 2rem;
+margin-bottom: 2rem;
+}
+
+/* removes the vertical list */
+.recipe-sub-nav-bar li{
+  float: left;
+}
+
+h1 .recipes{
+  color: white;
+}
+
+/* recipes Tab */
+.logo-Not-Home {
+  max-width: 30%;
+}
